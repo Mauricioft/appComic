@@ -6,6 +6,10 @@ It is an application to show a random comic
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Installing dependencies
+
 ### `yarn start`
 
 Runs the app in the development mode.\
