@@ -3,7 +3,7 @@ import ComicService from 'services/ComicService'
 
 const useSingleComic = ({ id }) => {
   const [isLoading, setIsLoading] = useState(false)
-  const [comic, setComic] = useState()
+  const [comic, setComic] = useState({ title: '', img: '' })
 
   useEffect(() => {
     setIsLoading(true)
@@ -16,6 +16,8 @@ const useSingleComic = ({ id }) => {
       .catch(() => {
         setIsLoading(false)
       })
+
+    return () => setIsLoading(false)
   }, [id])
 
   return { isLoading, comic }
